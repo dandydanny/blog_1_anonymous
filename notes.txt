@@ -1,0 +1,9 @@
+p = Post.create(title: "title1", body: "body1")
+p.tags << Tag.create(tag: "pizza")
+
+p2 = Post.create(title: "title2", body: "body2")
+p2.tags << Tag.create(tag: "automotive")
+
+p3 = Post.create(title: "title3", body: "body3", tag: "orange")
+
+Post.first.tag_ids (return list of all tag ids as array)

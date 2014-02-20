@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
-  has_and_belongs_to_many :tags
-  validates :title, prescence: true
-  validates :body, prescence: true
+  has_many :post_tags
+  has_many :tags, through: :post_tags
+  validates :title, presence: true
+  validates :body, presence: true
 end
