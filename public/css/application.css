@@ -3,10 +3,14 @@ body {
 }
 
 .container {
+  color: white;
+  position: relative;
+  top: 50px;
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  /*border: 1px dotted black;*/
+  background-color: rgba(50,50,50,0.3);
 }
 
 th {
@@ -18,8 +22,9 @@ th {
 }
 
 .footer {
-  margin: 20px auto;
-  width: 600px;
+/*  margin: 20px auto;
+  width: 600px;*/
+  position: relative;
   text-align: center;
   background-color: pink;
 }
@@ -31,3 +36,38 @@ th {
 .footer a:hover {
   color: orange;
 }
+h1 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 100;
+}
+
+hr {
+  border: 0;
+  border-bottom: 5px solid white;
+  opacity: 0.5;
+}
+.title {
+  z-index: -1;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+  letter-spacing: -10px;
+  color: lightgray;
+  font-size: 130px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.write_fields {
+  width: 400px;
+  margin: 10px 0;
+}
+/*400,900,100,300,500,700,400italic*/

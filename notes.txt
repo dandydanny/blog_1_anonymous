@@ -7,3 +7,6 @@ p2.tags << Tag.create(tag: "automotive")
 p3 = Post.create(title: "title3", body: "body3", tag: "orange")
 
 Post.first.tag_ids (return list of all tag ids as array)
+
+Find all posts an id is associated with:
+Tag.find(1).posts

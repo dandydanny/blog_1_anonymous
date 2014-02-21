@@ -1,24 +1,40 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <img src="favicon128.png" style="float:left; padding-right: 20px">
-  <p>@DandyDanny's customized sinatra skeleton.</p>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+  <h2>Share Your Thoughs</h2>
+  <hr>
+
+  <div class="write_area">
+    <form action="/write" method="POST" id="write_form">
+      Title:<br>
+      <input type="text" name="title" class="write_fields" placeholder="e.g. Why Cookies Are Awesome"><br>
+      Post Body:<br>
+      <textarea name="body" class="write_fields" rows="10" placeholder="e.g. Because they are. Period."></textarea><br>
+      Tags (separated by commas):<br>
+      <input type="text" name="tags" class="write_fields" placeholder="e.g. Cookie, Awesome, Yolo"><br><br>
+      <input type="submit" value="Post It">
+    </form>
+  </div>
+
+  <h2>Recent Posts</h2>
+  <hr>
+
+  <div class="display_area">
+    <% @all_posts.each do |post|%>
+      <div class="single_post">
+      <h2 class="post_title"><%= post.title %></h2>
+      <p class="post_tags">
+        <% post.tags.each do |singletag| %>
+          <%= singletag.tag %>,
+        <% end %>
+      </p>
+      <p><%= post.body %></p>
+      Tags:<br>
+        <% post.tags.each do |singletag| %>
+          <%= singletag.tag %>,
+        <% end %>
+        <br>
+      </div>
+    <% end %>
+  </div>
+
 </div>
