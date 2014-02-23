@@ -22,16 +22,13 @@
     <% @all_posts.each do |post|%>
       <div class="single_post">
       <h2 class="post_title"><%= post.title %></h2>
-      <p class="post_tags">
+      <p class="post_time"><%= post.created_at %></p>
+      <p class="post_tags">Tags: 
         <% post.tags.each do |singletag| %>
           <%= singletag.tag %>,
         <% end %>
       </p>
       <p><%= post.body %></p>
-      Tags:<br>
-        <% post.tags.each do |singletag| %>
-          <%= singletag.tag %>,
-        <% end %>
         <br>
       </div>
     <% end %>
