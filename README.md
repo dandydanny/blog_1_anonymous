@@ -3,6 +3,8 @@ Blog 1: Anonymous Blog
 
 Using @DandyDanny's custom sinatra skeleton.
 
+Original project requirements below:
+
 <h1 class='span8'>
 Blog 1: Anonymous Blog
 <small>Challenge</small>
