@@ -1,7 +1,7 @@
-# danny sinatra skeleton
+Blog 1: Anonymous Blog
 ======================
 
-@DandyDanny's custom sinatra skeleton.
+Using @DandyDanny's custom sinatra skeleton.
 
 <h1 class='span8'>
 Blog 1: Anonymous Blog
